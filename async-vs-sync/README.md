@@ -13,7 +13,7 @@ So I wrote an example to demonstrate the difference for myself :D
 
 In quarkus every incoming request is executed by a thread. This thread is called "executor-thread". You can see it in the logs of the app if you log something (executor-thread-<number>).
 Normally quarkus creates many threads (see https://quarkus.io/guides/all-config#quarkus-core_quarkus.thread-pool.max-threads) to allow many requests.
-For our example we only allow 1 thread (see `applicatoin.properties`).
+For our example we only allow 1 thread (see `application.properties`).
 
 This application creates HelloWorld messages via blocking and non-blocking code.
 
