@@ -19,19 +19,19 @@ public class GreetingService {
 
         return Uni.createFrom().item(new HelloWorld())
             .onItem()
-                .transform(hamburml -> {
+                .transform(helloWorld -> {
                     LOG.info(new StringBuilder().append("set greeting on me... ").append(greeting).toString());
-                    hamburml.setGreeting(greeting);
+                    helloWorld.setGreeting(greeting);
 
-                    return hamburml;
+                    return helloWorld;
                 })
             .onItem()
                 .delayIt().by(Duration.ofSeconds(secondsOfDelay))
             .onItem()
-                .transform(hamburml -> {
+                .transform(helloWorld -> {
                     LOG.info(new StringBuilder().append("set date on me... ").append(date).toString());
-                    hamburml.setDate(date);
-                    return hamburml;
+                    helloWorld.setDate(date);
+                    return helloWorld;
                 });
     }
 
