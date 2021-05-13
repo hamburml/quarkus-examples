@@ -37,18 +37,21 @@ This application creates HelloWorld messages via blocking and non-blocking code.
     
 # How to use
 
+## async
 - start application
 - open two or three tabs and surf to `http://localhost:8080/async/helloworld`
 - check logs and see that the `executor-thread-1` handles the request
 - recognize that after n seconds the response is send out
 
-
+## sync
+- start application
 - open one tab and surf to `http://localhost:8080/sync/helloworld`
 - open another tab and surf to the `http://localhost:8080/sync/helloworld`
 - check logs and see that the first request is handled by `executor-thread-1`
 - The second request is not shown in the logs. After the first request is completed, the second requests is shown in the log.
 
-
+## mixed
+- start application
 - open some tabs with `http://localhost:8080/async/helloworld`
 - open one tab with `http://localhost:8080/sync/helloworld`
 - Remember, we only have one thread! If the sync/helloworld is executed the thread will wait - even the async-requests will now stuck.
