@@ -6,8 +6,8 @@ I read the following websites to understand non-blocking java (especially how it
 - https://quarkus.io/guides/vertx
 - https://smallrye.io/smallrye-mutiny/guides
 
-Now I know that quarkus is based on vert.x, can do imperative and reactive quite well. If I understood it correctly even imperative code is managed very well in quarkus so it's not always necessary to use reactive.
-Now I needed an example to demonstrate the difference and wrote one.
+Now I know that quarkus is based on vert.x, can do imperative and reactive quite well. If I understood it correctly even imperative code is managed very well in quarkus so it's not always necessary to use reactive. But I didn't get it quite well...
+So I wrote an example to demonstrate the difference for myself :D
 
 # Overview
 
