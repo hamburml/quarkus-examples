@@ -42,10 +42,12 @@ This application creates HelloWorld messages via blocking and non-blocking code.
 - check logs and see that the `executor-thread-1` handles the request
 - recognize that after n seconds the response is send out
 
+
 - open one tab and surf to `http://localhost:8080/sync/helloworld`
 - open another tab and surf to the `http://localhost:8080/sync/helloworld`
 - check logs and see that the first request is handled by `executor-thread-1`
 - The second request is not shown in the logs. After the first request is completed, the second requests is shown in the log.
+
 
 - open some tabs with `http://localhost:8080/async/helloworld`
 - open one tab with `http://localhost:8080/sync/helloworld`
