@@ -37,3 +37,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+      - name: Archive dependency check report
+        uses: actions/upload-artifact@v2
+        with:
+          name: dependency check report
+          path: /home/runner/work/quarkus-examples/quarkus-examples/async-vs-sync/target/dependency-check-report.html
