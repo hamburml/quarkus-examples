@@ -81,4 +81,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: dependency check report
-          path: /home/runner/work/quarkus-examples/quarkus-examples/quarkus-profiles/target/dependency-check-report.html
+          path: /home/runner/work/quarkus-examples/quarkus-examples/async-vs-sync/target/dependency-check-report.html
